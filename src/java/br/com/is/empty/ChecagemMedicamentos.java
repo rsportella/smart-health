@@ -1,8 +1,8 @@
 package br.com.is.empty;
 
-public class checagem_medicamentos {
+public class ChecagemMedicamentos {
 
-    private int id_checagem;
+    private int codigo;
     private boolean checado;
     private String data_deve_aplicar;
     private String hora_deve_aplicar;
@@ -15,17 +15,47 @@ public class checagem_medicamentos {
     private boolean inutilizado;
     private String data_motivo;
     private String hora_motivo;
-    private int cod_usuario_motivo;
+    private Usuario cod_usuario_motivo;
     private boolean devolucao_recusada;
-    private int cod_item_prescricao;
-    private int cod_item_requisicao_estoque;
+    private LancamentosPrescricoes cod_item_prescricao;
+    private ItensRequisicoesEstoque cod_item_requisicao_estoque;
 
-    public int getId_checagem() {
-        return id_checagem;
+    // Metodos -----------------------------------------------------------------
+    public ChecagemMedicamentos() {
     }
 
-    public void setId_checagem(int id_checagem) {
-        this.id_checagem = id_checagem;
+    public ChecagemMedicamentos(int codigo, boolean checado, String data_deve_aplicar, String hora_deve_aplicar, String data_checagem, String hora_checagem, Double quantidade, String motivo, boolean devolvido, boolean perdido, boolean inutilizado, String data_motivo, String hora_motivo, Usuario cod_usuario_motivo, boolean devolucao_recusada, LancamentosPrescricoes cod_item_prescricao, ItensRequisicoesEstoque cod_item_requisicao_estoque) {
+        this.codigo = codigo;
+        this.checado = checado;
+        this.data_deve_aplicar = data_deve_aplicar;
+        this.hora_deve_aplicar = hora_deve_aplicar;
+        this.data_checagem = data_checagem;
+        this.hora_checagem = hora_checagem;
+        this.quantidade = quantidade;
+        this.motivo = motivo;
+        this.devolvido = devolvido;
+        this.perdido = perdido;
+        this.inutilizado = inutilizado;
+        this.data_motivo = data_motivo;
+        this.hora_motivo = hora_motivo;
+        this.cod_usuario_motivo = cod_usuario_motivo;
+        this.devolucao_recusada = devolucao_recusada;
+        this.cod_item_prescricao = cod_item_prescricao;
+        this.cod_item_requisicao_estoque = cod_item_requisicao_estoque;
+    }
+
+    @Override
+    public String toString() {
+        return "ChecagemMedicamentos{" + "codigo=" + codigo + ", checado=" + checado + ", data_deve_aplicar=" + data_deve_aplicar + ", hora_deve_aplicar=" + hora_deve_aplicar + ", data_checagem=" + data_checagem + ", hora_checagem=" + hora_checagem + ", quantidade=" + quantidade + ", motivo=" + motivo + ", devolvido=" + devolvido + ", perdido=" + perdido + ", inutilizado=" + inutilizado + ", data_motivo=" + data_motivo + ", hora_motivo=" + hora_motivo + ", cod_usuario_motivo=" + cod_usuario_motivo + ", devolucao_recusada=" + devolucao_recusada + ", cod_item_prescricao=" + cod_item_prescricao + ", cod_item_requisicao_estoque=" + cod_item_requisicao_estoque + '}';
+    }
+
+    // Getters e Setters -------------------------------------------------------
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
     public boolean isChecado() {
@@ -124,11 +154,11 @@ public class checagem_medicamentos {
         this.hora_motivo = hora_motivo;
     }
 
-    public int getCod_usuario_motivo() {
+    public Usuario getCod_usuario_motivo() {
         return cod_usuario_motivo;
     }
 
-    public void setCod_usuario_motivo(int cod_usuario_motivo) {
+    public void setCod_usuario_motivo(Usuario cod_usuario_motivo) {
         this.cod_usuario_motivo = cod_usuario_motivo;
     }
 
@@ -140,19 +170,19 @@ public class checagem_medicamentos {
         this.devolucao_recusada = devolucao_recusada;
     }
 
-    public int getCod_item_prescricao() {
+    public LancamentosPrescricoes getCod_item_prescricao() {
         return cod_item_prescricao;
     }
 
-    public void setCod_item_prescricao(int cod_item_prescricao) {
+    public void setCod_item_prescricao(LancamentosPrescricoes cod_item_prescricao) {
         this.cod_item_prescricao = cod_item_prescricao;
     }
 
-    public int getCod_item_requisicao_estoque() {
+    public ItensRequisicoesEstoque getCod_item_requisicao_estoque() {
         return cod_item_requisicao_estoque;
     }
 
-    public void setCod_item_requisicao_estoque(int cod_item_requisicao_estoque) {
+    public void setCod_item_requisicao_estoque(ItensRequisicoesEstoque cod_item_requisicao_estoque) {
         this.cod_item_requisicao_estoque = cod_item_requisicao_estoque;
     }
 

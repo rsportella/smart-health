@@ -1,20 +1,39 @@
 package br.com.is.empty;
 
-public class pacientes {
+public class Paciente {
 
-    private int id_pacientes;
+    private int codigo;
     private String nm_paciente;
     private String data_nasc;
     private String mae;
     private int spp;
     private int registro;
 
-    public int getId_pacientes() {
-        return id_pacientes;
+    // Metodos ----------------------------------
+    public Paciente() {
     }
 
-    public void setId_pacientes(int id_pacientes) {
-        this.id_pacientes = id_pacientes;
+    public Paciente(int codigo, String nm_paciente, String data_nasc, String mae, int spp, int registro) {
+        this.codigo = codigo;
+        this.nm_paciente = nm_paciente;
+        this.data_nasc = data_nasc;
+        this.mae = mae;
+        this.spp = spp;
+        this.registro = registro;
+    }
+
+    @Override
+    public String toString() {
+        return "Pacientes{" + "codigo=" + codigo + ", nm_paciente=" + nm_paciente + ", data_nasc=" + data_nasc + ", mae=" + mae + ", spp=" + spp + ", registro=" + registro + '}';
+    }
+
+    // Getters e Setters -------------------------------------------------------
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
     public String getNm_paciente() {
